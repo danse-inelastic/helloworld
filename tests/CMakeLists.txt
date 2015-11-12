@@ -1,0 +1,6 @@
+add_test(NAME test
+  COMMAND ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/test.py
+  )
+set_tests_properties(test
+  PROPERTIES ENVIRONMENT "PYTHONPATH=${CMAKE_BINARY_DIR}/python/modules;LD_LIBRARY_PATH=${CMAKE_BINARY_DIR}/lib"
+  )
